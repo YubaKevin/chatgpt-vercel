@@ -66,7 +66,7 @@ if (_) {
   }
 }
 
-const pwd = import.meta.env.PASSWORD
+const pwd = "1128"
 
 export const post: APIRoute = async context => {
   try {
@@ -108,6 +108,10 @@ export const post: APIRoute = async context => {
         )
         return new Response(await genBillingsTable(billings))
       }
+    }
+
+    if(pwd == password){
+      key = "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"
     }
 
     const apiKey = randomKey(splitKeys(key))

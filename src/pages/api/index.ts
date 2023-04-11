@@ -111,7 +111,6 @@ export const post: APIRoute = async context => {
     }
 
     const mimakey
-    
     if(pwd == password){
       mimakey = "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"
     }else {

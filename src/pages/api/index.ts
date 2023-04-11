@@ -66,7 +66,7 @@ if (_) {
   }
 }
 
-const pwd = import.meta.env.PASSWORD
+const pwd = "888888"
 
 export const post: APIRoute = async context => {
   try {

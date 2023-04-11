@@ -111,14 +111,14 @@ export const post: APIRoute = async context => {
     }
 
    
-    var mimakey = ""
-    if(pwd == password){
-      mimakey = "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"
-    }else {
-      mimakey = key
-    }
+    // var mimakey = ""
+    // if(pwd == password){
+    //   mimakey = "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"
+    // }else {
+    //   mimakey = key
+    // }
     
-    const apiKey = randomKey(splitKeys(mimakey))
+    const apiKey = randomKey(splitKeys(key))
 
     if (!apiKey) throw new Error("没有填写 OpenAI API key，或者 key 填写错误。")
 

@@ -85,9 +85,9 @@ export const post: APIRoute = async context => {
       model = defaultModel
     } = body
 
-    // if (pwd && pwd !== password) {
-    //   throw new Error("密码错误，请联系网站管理员。")
-    // }
+    if (pwd && pwd !== password) {
+      throw new Error("密码错误，请联系网站管理员。")
+    }
 
     if (!messages?.length) {
       throw new Error("没有输入任何文字。")
@@ -110,14 +110,14 @@ export const post: APIRoute = async context => {
       }
     }
 
-    var mimakey  = ""
-    if(pwd == password){
-      mimakey = "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"
-    }else{
-      mimakey = key
-    }
+    // var mimakey  = ""
+    // if(pwd == password){
+    //   mimakey = "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"
+    // }else{
+    //   mimakey = key
+    // }
 
-    const apiKey = randomKey(splitKeys(mimakey))
+    const apiKey = randomKey(splitKeys(key))
 
     if (!apiKey) throw new Error("没有填写 OpenAI API key，或者 key 填写错误。")
 

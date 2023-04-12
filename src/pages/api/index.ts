@@ -86,11 +86,11 @@ export const post: APIRoute = async context => {
     } = body
 
     // 如果key 不为空，就不校验密码
-    if(key == ""){
+ 
       if (pwd && pwd !== password) {
         throw new Error("密码错误，请联系网站管理员。")
       }
-    }
+   
 
     if (!messages?.length) {
       throw new Error("没有输入任何文字。")

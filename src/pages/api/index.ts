@@ -66,7 +66,8 @@ if (_) {
   }
 }
 
-const pwd = "gptplus"
+// 密码设置
+const pwd = "1016"
 
 export const post: APIRoute = async context => {
   try {
